@@ -14,6 +14,12 @@ def find_second_largest(a):
         if a[i] < largest and a[i] > second_largest:
             second_largest = a[i]
 
+    # if second largest is 0, then most
+    # likely the second largest number does 
+    # not exist. Returning -1.
+    if second_largest == 0:
+        second_largest = -1
+    
     return second_largest
 
 print(find_second_largest(array))
