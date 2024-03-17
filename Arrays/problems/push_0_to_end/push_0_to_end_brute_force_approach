@@ -1,0 +1,19 @@
+array = [8, 5, 0, 10, 0 ,20]
+
+
+def push_0_to_end(a):
+
+    for i in range(0, len(a) - 1):
+        if a[i] == 0:
+            for j in range(i, len(a) - 1):
+                print(j)
+                a[j] = a[j+1]
+            
+            # shifting 0 at end
+            a[len(a)-1] = 0
+
+    return a
+
+if __name__ == '__main__':
+    modified_array = push_0_to_end(array)
+    print(modified_array)
